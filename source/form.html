@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Подбор программы CAT ENERGY</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
 
   <body class="page__body">
@@ -19,13 +20,13 @@
 
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
             <li class="main-nav__item main-nav__item--current">
-              <a href="#">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
               <a href="#">Подбор программы</a>
             </li>
           </ul>
@@ -44,19 +45,19 @@
       <form class="selection-info" action="https://echo.htmlacademy.ru/" method="post">
         <div class="selection-info__wrapper">
 
-          <fieldset class="selection-info__about about">
-            <ul class="about__list">
-              <li class="about__item">
-                <label class="about__question" for="name">Имя:</label>
-                <input class="about__answer" placeholder="Барсик" type="text" name="name" id="name" required>
+          <fieldset class="selection-info__about cat-about">
+            <ul class="cat-about__list">
+              <li class="cat-about__item">
+                <label class="cat-about__question" for="name">Имя:</label>
+                <input class="cat-about__answer" placeholder="Барсик" type="text" name="name" id="name" required>
               </li>
-              <li class="about__item">
-                <label class="about__question" for="weight">Вес (кг):</label>
-                <input class="about__answer" placeholder="7" type="number" name="weight" id="weight" min="0" required>
+              <li class="cat-about__item">
+                <label class="cat-about__question" for="weight">Вес (кг):</label>
+                <input class="cat-about__answer" placeholder="7" type="number" name="weight" id="weight" min="0" required>
               </li>
-              <li class="about__item">
-                <label class="about__question" for="age">Возраст (лет):</label>
-                <input class="about__answer" placeholder="7" type="number" name="age" id="age" min="0">
+              <li class="cat-about__item">
+                <label class="cat-about__question" for="age">Возраст (лет):</label>
+                <input class="cat-about__answer" placeholder="7" type="number" name="age" id="age" min="0">
               </li>
             </ul>
           </fieldset>
@@ -87,16 +88,16 @@
             </ul>
           </fieldset>
 
-          <fieldset class="selection-info__contacts contacts">
-            <legend class="contacts__title">Контактные данные (владельца кота)</legend>
-            <ul class="contacts__list">
-              <li class="contacts__item">
-                <label class="contacts__question" for="email">E-mail:</label>
-                <input class="contacts__answer" placeholder="kuklachev@gmail.com" type="email" name="email" id="email" required>
+          <fieldset class="selection-info__contacts cat-contacts">
+            <legend class="cat-contacts__title">Контактные данные (владельца кота)</legend>
+            <ul class="cat-contacts__list">
+              <li class="cat-contacts__item">
+                <label class="cat-contacts__question" for="email">E-mail:</label>
+                <input class="cat-contacts__answer" placeholder="kuklachev@gmail.com" type="email" name="email" id="email" required>
               </li>
-              <li class="contacts__item">
-                <label class="contacts__question" for="phone-number">Телефон:</label>
-                <input class="contacts__answer" placeholder="8 (960) 900-60-90" type="tel" name="phone-number" id="phone-number" required>
+              <li class="cat-contacts__item">
+                <label class="cat-contacts__question" for="phone-number">Телефон:</label>
+                <input class="cat-contacts__answer" placeholder="8 (960) 900-60-90" type="tel" name="phone-number" id="phone-number" required>
               </li>
             </ul>
           </fieldset>
@@ -108,7 +109,7 @@
 
           <fieldset class="selection-info__additional additional">
             <legend class="additional__title">Дополнительно</legend>
-            <ul class="additional_list">
+            <ul class="additional__list">
               <li class="additional__item">
                 <label>
                   <input class="additional__input" type="checkbox" name="sweetener" checked>
@@ -151,7 +152,7 @@
 
       <div class="main-footer__wrapper">
 
-        <div class="main-footer__contacts contacts">
+        <div class="main-footer__contacts contacts form-footer">
           <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
           <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
@@ -161,7 +162,7 @@
         </div>
 
         <a class="main-footer__logo logo-text">
-          <img class="logo-text__image" src="./img/logo-mobile-catenergy.svg" width="128" height="24" alt="Надпись CAT ENERGY.">
+          <img class="logo-text__image" src="./img/logo-text.svg" width="128" height="24" alt="Надпись CAT ENERGY.">
         </a>
 
         <div class="main-footer__social social">
@@ -180,7 +181,7 @@
         </div>
 
         <div class="main-footer__copyright copyright">
-          <b class="copyright__text">HTML Academy</b>
+          <p class="copyright__text">HTML Academy</p>
           <a class="copyright__link">
             <img src="./img/htmlacademy-grey.svg" width="27" height="34" alt="HTML Academy.">
           </a>
