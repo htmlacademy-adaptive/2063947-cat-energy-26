@@ -4,16 +4,14 @@
   <head>
     <meta charset="utf-8">
     <title>CAT ENERGY</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
 
   <body class="page__body">
 
     <header class="main-header">
       <a class="main-header__logo logo">
-        <img class="logo__image" src="./img/logo-mobile-cat.svg" width="34" height="38" alt="Логотип CAT ENERGY.">
-      </a>
-      <a class="main-header__logo logo-text">
-      <img class="logo-text__image" src="./img/logo-mobile-catenergy.svg" width="101" height="18" alt="Надпись CAT ENERGY.">
+        <img class="logo__image" src="./img/logo.svg" width="191" height="38" alt="Логотип CAT ENERGY.">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -26,10 +24,10 @@
               <a href="#">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Каталог продукции</a>
+              <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Подбор программы</a>
+              <a href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -40,8 +38,10 @@
     <main class="main-container">
 
       <div class="main-container__wrapper">
-      <h1 class="main-container__title">Функциональное питание для котов</h1>
-      <p class="main-container__text">Занялся собой? Займись котом</p>
+        <div class="main-container__wrapper-image">
+          <h1 class="main-container__title">Функциональное питание для котов</h1>
+          <p class="main-container__text">Занялся собой? Займись котом!</p>
+        </div>
       <img class="main-container__image" src="./img/index-mobile.jpg" width="280" height="270" alt="Фото продукта.">
       <a class="button main-container__button" href="#">Подобрать программу</a>
       </div>
@@ -95,16 +95,16 @@
           <h2 class="description__title">Как это работает</h2>
           <ul class="description__list">
             <li class="description__item description__item--healthy">
-              <p class="description-text">Функциональное питание содержит только полезные питательные вещества.</p>
+              <p class="description__text">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
             <li class="description__item description__item--powder">
-              <p class="description-text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+              <p class="description__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
             <li class="description__item description__item--economy">
-              <p class="description-text">Замените один-два приема обычной еды на наше функциональное питание.</p>
+              <p class="description__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
             <li class="description__item description__item--result">
-              <p class="description-text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              <p class="description__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
             </li>
           </ul>
         </div>
@@ -135,7 +135,7 @@
             <div class="example-toggle__range">
               <button class="button example-toggle__button" type="submit">Было</button>
               <div>
-                <input type="range" id="before-after" name="before-after" min="" max="">
+                <input type="range" id="before-after" name="before-after" min="1" max="1000">
                 <label class="visually-hidden" for="before-after">Было-Стало</label>
               </div>
               <button class="button example-toggle__button" type="submit">Стало</button>
@@ -161,7 +161,7 @@
         </div>
 
         <a class="main-footer__logo logo-text">
-          <img class="logo-text__image" src="./img/logo-mobile-catenergy.svg" width="128" height="24" alt="Надпись CAT ENERGY.">
+          <img class="logo-text__image" src="./img/logo-text.svg" width="128" height="24" alt="Надпись CAT ENERGY.">
         </a>
 
         <div class="main-footer__social social">
@@ -180,7 +180,7 @@
         </div>
 
         <div class="main-footer__copyright copyright">
-          <b class="copyright__text">HTML Academy</b>
+          <p class="copyright__text">HTML Academy</p>
           <a class="copyright__link">
             <img src="./img/htmlacademy-grey.svg" width="27" height="34" alt="HTML Academy.">
           </a>
