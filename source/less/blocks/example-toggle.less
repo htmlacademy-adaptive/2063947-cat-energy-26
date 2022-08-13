@@ -1,5 +1,12 @@
 .example-toggle__range {
   padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    padding-top: 25px;
+  }
 }
 
 .example-toggle__button {
@@ -7,5 +14,24 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.example-toggle__image {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.example-toggle__image-tablet {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    margin: 0 auto;
+  }
 }
 

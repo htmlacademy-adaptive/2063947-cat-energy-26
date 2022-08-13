@@ -1,6 +1,16 @@
 .description__wrapper {
   width: 280px;
-  margin: 0 21px 49px 21px;
+  padding: 0 21px 49px 21px;
+
+  @media (min-width: 768px) {
+    width: 768px;
+    padding: 15px 105px 47px 30px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1224px;
+    padding: 0 106px 26px 110px;
+  }
 }
 
 .description__title {
@@ -9,6 +19,15 @@
   line-height: 40px;
   margin: 0;
   padding-bottom: 40px;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-bottom: 32px;
+  }
 }
 
 .description__text {
@@ -17,11 +36,29 @@
   font-size: 14px;
   line-height: 18px;
   margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .description__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 250px 250px; /*взяла среднее значение*/
+    column-gap: 140px; /*взяла среднее значение*/
+    row-gap: 37px;
+  }
+
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0;
+  }
 }
 
