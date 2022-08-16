@@ -1,3 +1,14 @@
+.main-container__wrapper {
+  @media (min-width: 1440px) {
+    padding-left: 190px;
+    padding-bottom: 267px;
+    display: grid;
+    grid-template-columns: 460px min-content;
+    grid-template-rows: min-content min-content;
+    row-gap: 52px;
+  }
+}
+
 .main-container__title {
   font-weight: 400;
   font-size: 36px;
@@ -18,8 +29,8 @@
   }
 
   @media (min-width: 1440px) {
-    margin-left: 190px;
     margin-top: 111px;
+    margin-left: 0;
   }
 }
 
@@ -29,6 +40,7 @@
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
+  margin: 0;
 
   @media (min-width: 768px) {
     color: #000000;
@@ -39,7 +51,7 @@
   }
 
   @media (min-width: 1440px) {
-    margin-left: 190px;
+    margin-left: 0;
   }
 }
 
@@ -81,5 +93,6 @@
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 20px;
+    text-align: left;
   }
 }
