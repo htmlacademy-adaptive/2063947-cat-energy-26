@@ -1,5 +1,20 @@
-.selection-container {
-  margin-left: 20px;
+.selection-container__wrapper {
+  width: 280px;
+  padding-top: 27px;
+  padding-bottom: 32px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 630px;
+    padding-top: 65px;
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1220px;
+    padding-top: 77px;
+    padding-bottom: 82px;
+  }
 }
 
 .selection-container__title {
@@ -7,17 +22,37 @@
   font-size: 36px;
   line-height: 36px;
   margin: 0;
-  margin-top: 27px;
   margin-bottom: 37px;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 56px;
+  }
 }
 
 .selection-container__text {
+  width: 226px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: 768px) {
+    width: 323px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .selection-container__button {
   margin-bottom: 21px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }

@@ -1,20 +1,27 @@
 .example {
+  width: 280px;
+  margin: 0 auto;
   background-color: #eaeaea;
 
   @media (min-width: 768px) {
+    width: 708px;
     background-color: #ffffff;
   }
 
   @media (min-width: 1440px) {
-    background-color: #f2f2f2
+    width: 1440px;
+    background-color: #f2f2f2;
   }
 }
 
 .example__wrapper {
   @media (min-width: 1440px) {
     display: flex;
-    padding: 69px 110px 65px 110px;
     justify-content: space-between;
+    width: 1220px;
+    padding-top: 69px;
+    padding-bottom: 65px;
+    margin: 0 auto;
   }
 }
 
@@ -22,7 +29,8 @@
   padding: 25px 20px 40px 20px;
 
   @media (min-width: 768px) {
-    padding: 43px 30px 80px 30px;
+    padding-top: 43px;
+    padding-bottom: 80px;
   }
 
   @media (min-width: 1440px) {
@@ -67,7 +75,7 @@
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 24px;
-    margin-top: 146px;
-    margin-bottom: 69px;
+    margin-top: 63px;
+    margin-bottom: 54px;
   }
 }

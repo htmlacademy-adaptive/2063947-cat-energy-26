@@ -1,21 +1,26 @@
 .change-weight__wrapper {
-  width: 280px;
-  margin: 20px;
   padding: 30px 33px 18px 20px;
   background-color: #f2f2f2;
 
   @media (min-width: 768px) {
-    width: 708px;
-    margin: 30px; /*здесь, наверное, у блока Похудение верхний margin убрать*/
     padding: 77px 62px 53px 52px;
   }
 
   @media (min-width: 1440px) {
-    margin: 0;
-    margin-top: 82px;
-    margin-bottom: 71px;
     padding: 77px 51px 55px 52px;
-    width: 570px;
+  }
+}
+
+.change-weight + .change-weight {
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 0;
+    margin-left: 80px;
   }
 }
 
