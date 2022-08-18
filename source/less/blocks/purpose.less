@@ -1,5 +1,19 @@
 .purpose {
+  margin: 0;
+  padding: 0;
   margin-bottom: 46px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 71px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 28px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 568px;
+    margin-bottom: 0;
+  }
 }
 
 .purpose__label {
@@ -7,10 +21,19 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .purpose__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.purpose__item + .purpose__item {
+  margin-top: 13px;
 }

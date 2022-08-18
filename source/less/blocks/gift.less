@@ -1,12 +1,28 @@
-.gift__wrapper {
-  width: 280px;
+.gift {
+  @media (min-width: 1440px) {
+    width: 245px;
+  }
 }
 
-.gift {
-  background-color: rgba(105, 183, 56, 0.85);
+.gift__wrapper {
   background-image: url("../img/gift-background.jpg");
   background-repeat: no-repeat;
+  width: 280px;
   height: 290px;
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+
+  @media (min-width: 768px) {
+    width: 707px;
+    height: 200px;
+    margin-top: 0;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 289px;
+  }
 }
 
 .gift__text {
@@ -15,5 +31,10 @@
   line-height: 20px;
   color: #ffffff;
   margin: 0;
-  padding: 187px 61px 43px 58px;
+  padding-top: 152px;
+  text-align: center;
+
+  @media (min-width: 1440px) {
+    padding-top: 185px;
+  }
 }
