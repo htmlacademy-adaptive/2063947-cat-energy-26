@@ -23,6 +23,12 @@
   @media (min-width: 768px) {
     margin-bottom: 0;
   }
+
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 38px;
+  }
 }
 
 .supplement__value {
@@ -30,11 +36,18 @@
 }
 
 .supplement__button {
+  font-size: 16px;
+  line-height: 20px;
+  min-width: 280px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   @media (min-width: 768px) {
     grid-column: 1 / 3;
   }
 
   @media (min-width: 1440px) {
     grid-column: 3 / 4;
+    min-width: 244px;
   }
 }
