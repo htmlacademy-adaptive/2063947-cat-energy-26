@@ -9,6 +9,21 @@
   }
 }
 
+.about__group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__group + .about__group {
+  @media (min-width: 768px) {
+    margin-top: 14px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 16px;
+  }
+}
+
 .about__value {
   margin: 0;
 }

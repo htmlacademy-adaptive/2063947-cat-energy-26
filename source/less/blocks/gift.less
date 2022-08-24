@@ -18,10 +18,13 @@
     height: 200px;
     margin-top: 0;
     margin-bottom: 76px;
+    background-size: cover;
   }
 
   @media (min-width: 1440px) {
+    width: 245px;
     height: 289px;
+    margin-bottom: 0;
   }
 }
 
@@ -31,10 +34,18 @@
   line-height: 20px;
   color: #ffffff;
   margin: 0;
-  padding-top: 152px;
+  padding-top: 187px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    padding-top: 71px;
+    padding-left: 422px;
+    text-align: left;
+  }
 
   @media (min-width: 1440px) {
     padding-top: 185px;
+    padding-left: initial;
+    text-align: center;
   }
 }

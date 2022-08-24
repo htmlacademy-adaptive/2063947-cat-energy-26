@@ -1,4 +1,33 @@
+.example-toggle {
+  display: flex;
+  position: relative;
+}
+
+.example-toggle__image--before {
+  width: 140px;
+
+  @media (min-width: 768px) {
+    width: initial;
+  }
+}
+
+.example-toggle__image--after {
+  width: 140px;
+  margin-left: -140px;
+
+  @media (min-width: 768px) {
+    width: initial;
+    margin-left: initial;
+  }
+}
+
 .example-toggle__range {
+  position: absolute;
+  content: "";
+  top: 0;
+}
+
+/*.example-toggle__range {
   margin-top: 15px;
   display: flex;
   justify-content: center;
@@ -21,7 +50,12 @@
   }
 }
 
-.example-toggle__image {
+.example-toggle__image img {
   display: block;
   margin: 0 auto;
-}
+
+  @media (min-width: 768px) {
+    width: 560px;
+    height: 512px;
+  }
+}*/

@@ -9,6 +9,8 @@
 
   @media (min-width: 768px) {
     margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
@@ -19,20 +21,40 @@
   color: #444444;
   margin: 0;
   margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: 768px) {
     margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   @media (min-width: 1440px) {
-    display: flex;
-    justify-content: space-between;
     margin-right: 38px;
+  }
+}
+
+.supplement__parameter {
+  @media (min-width: 768px) {
+    margin-left: auto;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: initial;
   }
 }
 
 .supplement__value {
   margin: 0;
+
+  @media (min-width: 768px) {
+    margin-left: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: initial;
+  }
 }
 
 .supplement__button {
