@@ -1,61 +1,81 @@
 .example-toggle {
   display: flex;
   position: relative;
+
+  @media (min-width: 768px) {
+    width: 560px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    margin: initial;
+  }
+}
+
+.example-toggle img {
+  @media (min-width: 768px) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.example-toggle__image {
+  overflow: hidden;
+  display: flex;
+  margin: 0;
 }
 
 .example-toggle__image--before {
-  width: 140px;
-
-  @media (min-width: 768px) {
-    width: initial;
-  }
+  justify-content: flex-start;
 }
 
 .example-toggle__image--after {
-  width: 140px;
-  margin-left: -140px;
-
-  @media (min-width: 768px) {
-    width: initial;
-    margin-left: initial;
-  }
+  justify-content: flex-end;
 }
 
 .example-toggle__range {
   position: absolute;
   content: "";
-  top: 0;
-}
-
-/*.example-toggle__range {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 50%;
+  left: 119px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  z-index: 1;
 
   @media (min-width: 768px) {
-    margin-top: 25px;
+    top: 255px;
+    left: 260px;
   }
 }
 
-.example-toggle__button {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+.example-toggle__range::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  width: 4px;
+  height: 256px;
+  background: linear-gradient(180deg, #666666 0%, #666666 calc(50% - 20px), transparent calc(50% - 20px), transparent calc(50% + 20px), #666666 calc(50% + 20px), #666666 100%);
+  z-index: -1;
 
   @media (min-width: 768px) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-.example-toggle__image img {
-  display: block;
-  margin: 0 auto;
-
-  @media (min-width: 768px) {
-    width: 560px;
     height: 512px;
   }
-}*/
+}
+
+.example-toggle__range::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/toggle-triangles.svg");
+  left: 6px;
+  top: 9px;
+  width: 24px;
+  height: 18px;
+}
+

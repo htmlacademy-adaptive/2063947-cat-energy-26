@@ -22,10 +22,12 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
+  padding-left: 22px;
 
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 32px;
   }
 }
 
@@ -37,4 +39,53 @@
 
 .purpose__item + .purpose__item {
   margin-top: 13px;
+
+  @media (min-width: 768px) {
+    margin-top: 20px;
+  }
+}
+
+.purpose__control {
+  position: relative;
+  display: block;
+}
+
+.purpose__input {
+  padding: 0;
+}
+
+.purpose__mark {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+
+  @media (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.purpose__input[type="radio"]:checked + .purpose__mark::before,
+.purpose__input[type="radio"]:checked + .purpose__mark::after {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/radio.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+
+  @media (min-width: 768px) {
+    top: 9px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+  }
 }
