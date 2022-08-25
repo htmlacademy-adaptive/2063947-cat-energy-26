@@ -12,10 +12,11 @@
   <body class="page__body">
 
     <header class="main-header">
-      <a class="main-header__logo logo">
+      <a class="main-header__logo logo" href="index.html">
         <img class="logo__image" src="./img/logo.svg" width="191" height="38" alt="Логотип CAT ENERGY.">
+        <img class="logo__together" src="./img/logo-together.svg" width="174" height="52" alt="Логотип CAT ENERGY.">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--with-js">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -111,35 +112,35 @@
 
             <fieldset class="selection-info__comment comment">
               <legend class="comment__title">Комментарий</legend>
-              <input class="comment__answer" placeholder="Расскажите обо всех повадках кота" type="text" name="comment" id="comment">
+              <textarea class="comment__answer" placeholder="Расскажите обо всех повадках кота" name="comment" id="comment" rows="6"></textarea>
             </fieldset>
 
             <fieldset class="selection-info__additional additional">
               <legend class="additional__title">Дополнительно</legend>
               <ul class="additional__list">
                 <li class="additional__item">
-                  <label>
+                  <label class="additional__control">
                     <input class="additional__input" type="checkbox" name="sweetener" checked>
                     <span class="additional__mark"></span>
                     <span class="additional__label">Сахарозаменитель</span>
                   </label>
                 </li>
                 <li class="additional__item">
-                  <label>
+                  <label class="additional__control">
                     <input class="additional__input" type="checkbox" name="water">
                     <span class="additional__mark"></span>
                     <span class="additional__label">Питьевая вода</span>
                   </label>
                 </li>
                 <li class="additional__item">
-                  <label>
+                  <label class="additional__control">
                     <input class="additional__input" type="checkbox" name="milk">
                     <span class="additional__mark"></span>
                     <span class="additional__label">Молоко</span>
                   </label>
                 </li>
                 <li class="additional__item">
-                  <label>
+                  <label class="additional__control">
                     <input class="additional__input" type="checkbox" name="vitamins">
                     <span class="additional__mark"></span>
                     <span class="additional__label">Витамины</span>
@@ -246,6 +247,8 @@
       </div>
 
     </footer>
+
+    <script src="./js/script.js"></script>
 
   </body>
 

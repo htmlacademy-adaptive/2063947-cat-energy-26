@@ -14,6 +14,7 @@
     <header class="main-header">
       <a class="main-header__logo logo">
         <img class="logo__image" src="./img/logo.svg" width="191" height="38" alt="Логотип CAT ENERGY.">
+        <img class="logo__together" src="./img/logo-together.svg" width="174" height="52" alt="Логотип CAT ENERGY.">
       </a>
       <nav class="main-nav main-nav--closed main-nav--with-js">
         <button class="main-nav__toggle" type="button">
@@ -45,15 +46,17 @@
           <p class="main-container__text">Занялся собой? Займись котом!</p>
         </div>
         <img class="main-container__image" src="./img/index-mobile.svg" width="280" height="270" alt="Фото продукта.">
-        <a class="button main-container__button" href="#">Подобрать программу</a>
+        <a class="button main-container__button" href="form.html">Подобрать программу</a>
       </div>
 
       <div class="weight-container">
 
         <section class="weight-container__lose change-weight">
           <div class="change-weight__wrapper">
-            <img class="change-weight__image" src="./img/lose-weight.svg" width="50" height="53" alt="Стройный кот.">
-            <h2 class="change-weight__title">Похудение</h2>
+            <div class="change-weight__inner-wrapper">
+              <img class="change-weight__image change-weight__image--lose" src="./img/lose-weight.svg" width="50" height="53" alt="Стройный кот.">
+              <h2 class="change-weight__title">Похудение</h2>
+            </div>
             <p class="change-weight__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету!
               Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
@@ -70,8 +73,10 @@
 
         <section class="weight-container__gain change-weight">
           <div class="change-weight__wrapper">
-            <img class="change-weight__image" src="./img/gain-weight.svg" width="67" height="50" alt="Сильный кот.">
-            <h2 class="change-weight__title">Набор массы</h2>
+            <div class="change-weight__inner-wrapper">
+              <img class="change-weight__image change-weight__image--gain" src="./img/gain-weight.svg" width="67" height="50" alt="Сильный кот.">
+              <h2 class="change-weight__title">Набор массы</h2>
+            </div>
             <p class="change-weight__text">Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
@@ -117,7 +122,6 @@
             <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
             Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
-
             <div class="example-results__wrapper">
               <dl class="example-results">
                 <div class="example-results__item">
@@ -131,24 +135,18 @@
               </dl>
               <p class="example-results__sum">Затраты на питание: 15 000 руб.</p>
             </div>
-
           </div>
 
           <div class="example__wrapper-toggle example-toggle">
             <div class="example-toggle__image example-toggle__image--before">
-              <img src="./img/before-cat-mobile.png" width="280" height="232" alt="Фото кота до программы.">
+              <img src="./img/cat-before.png" width="280" height="256" alt="Фото кота до программы.">
             </div>
             <div class="example-toggle__image example-toggle__image--after">
-              <img src="#" width="592" height="511" alt="Фото кота до и после программы.">
+              <img src="./img/cat-after.png" width="280" height="256" alt="Фото кота после программы.">
             </div>
-            <div class="example-toggle__range">
-              <button class="example-toggle__button" type="submit">Было</button>
-              <div>
-                <input type="range" id="before-after" name="before-after" min="1" max="1000">
-                <label class="visually-hidden" for="before-after">Было-Стало</label>
-              </div>
-              <button class="example-toggle__button" type="submit">Стало</button>
-            </div>
+            <button class="example-toggle__range" type="button">
+              <span class="visually-hidden">Было и стало.</span>
+            </button>
           </div>
 
         </div>
@@ -243,7 +241,7 @@
 
     </footer>
 
-  <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 
   </body>
 
