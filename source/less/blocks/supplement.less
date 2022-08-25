@@ -9,6 +9,8 @@
 
   @media (min-width: 768px) {
     margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
@@ -19,22 +21,55 @@
   color: #444444;
   margin: 0;
   margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: 768px) {
     margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-right: 38px;
+  }
+}
+
+.supplement__parameter {
+  @media (min-width: 768px) {
+    margin-left: auto;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: initial;
   }
 }
 
 .supplement__value {
   margin: 0;
+
+  @media (min-width: 768px) {
+    margin-left: 50px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: initial;
+  }
 }
 
 .supplement__button {
+  font-size: 16px;
+  line-height: 20px;
+  min-width: 280px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   @media (min-width: 768px) {
     grid-column: 1 / 3;
   }
 
   @media (min-width: 1440px) {
     grid-column: 3 / 4;
+    min-width: 244px;
   }
 }

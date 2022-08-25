@@ -14,7 +14,8 @@
   @media (min-width: 1440px) {
     width: 1220px;
     padding-top: 0;
-    padding-bottom: 26px;
+    padding-bottom: 69px;
+    padding-left: 0;
   }
 }
 
@@ -62,9 +63,31 @@
   }
 
   @media (min-width: 1440px) {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 0;
+    grid-template-columns: 245px 245px 245px 245px; /*взяла среднее значение*/
+    column-gap: 78px; /*взяла среднее значение*/
+    row-gap: 0;
+  }
+}
+
+.description__item {
+  margin-left: 20px;
+
+  @media (min-width: 768px) {
+    margin-left: 0;
+    padding-top: 151px;
+    height: 280px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 250px;
+  }
+}
+
+.description__item + .description__item {
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
   }
 }
 

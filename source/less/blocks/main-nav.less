@@ -1,6 +1,79 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  bottom: 12.5px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 17.5px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: #000000;
+  box-shadow: 0 8.5px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--opened .main-nav__toggle {
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 25px;
+    height: 1.5px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--closed .main-nav__list {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
 .main-nav__wrapper {
   @media (min-width: 768px) {
     width: 440px;
+
   }
 
   @media (min-width: 1440px) {
@@ -8,52 +81,123 @@
   }
 }
 
-/*.main-nav__wrapper::before {
-  @media (min-width: 1440px) {
-    position: absolute;
-    content: "";
-    width: 50%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    background-image:
-      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      url("../img/index-background-desktop.jpg");
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-}*/
-
 .main-nav__list {
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 20px;
-  line-height: 20px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: 768px) {
+    width: 440px;
     display: flex;
     justify-content: space-between;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
+    flex-wrap: wrap;
   }
 
   @media (min-width: 1440px) {
-    display: flex;
-    justify-content: space-between;
+    width: 478px;
     color: #ffffff;
   }
 }
 
-.main-nav__toggle {
+.main-nav__list a {
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-top: 1px solid #e6e6e6;
+
+  /*&:hover {
+    opacity: 0.8;
+  }*/
+
   @media (min-width: 768px) {
-    display: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    border-top: none;
+    margin-top: 2px;
   }
 
   @media (min-width: 1440px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.main-nav__list--white a {
+  @media (min-width: 1440px){
+    color: #ffffff;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: 768px) {
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        left: 0;
+        height: 2px;
+        background: #68b738;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &--currentwhite {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        left: 0;
+        height: 2px;
+        background: #ffffff;
+      }
+    }
+  }
+}
+
+// Стандартное меню c js.
+.main-nav--with-js .main-nav__list {
+  @media (max-width: 767px) {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+    text-align: center;
+  }
+}
+
+// Стандартное меню без js.
+@media (max-width: 767px) {
+  /*.main-nav:not(.main-nav--with-js) .main-nav__toggle {
     display: none;
+  }*/
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
   }
 }

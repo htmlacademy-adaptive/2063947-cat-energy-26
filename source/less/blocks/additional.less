@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 34px;
+  border: none;
 
   @media (min-width: 768px) {
     margin-bottom: 54px;
@@ -52,9 +53,56 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  padding-left: 31px;
 
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 46px;
+  }
+}
+
+.additional__control {
+  position: relative;
+  display: block;
+}
+
+.additional__mark {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: none;
+
+  @media (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.additional__input {
+  padding: 0;
+  margin: 0;
+}
+
+.additional__input[type="checkbox"]:checked + .additional__mark::before,
+.additional__input[type="checkbox"]:checked + .additional__mark::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: 6px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/checkbox.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+
+  @media (min-width: 768px) {
+    width: 24px;
+    height: 19px;
+    left: 7px;
   }
 }
