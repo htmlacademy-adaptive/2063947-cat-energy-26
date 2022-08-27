@@ -23,6 +23,11 @@
   list-style-type: none;
 }
 
+.cat-about__item {
+  display: flex;
+  align-items: center;
+}
+
 .cat-about__item + .cat-about__item {
   margin-top: 13px;
 
@@ -36,10 +41,16 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+  margin-right: 13px;
 
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
+    margin-right: 12px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-right: 14px;
   }
 }
 
@@ -49,9 +60,20 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+  border: 1px solid #e7e7e7;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-left: 15px;
+  flex-grow: 1;
 
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 10px;
+    padding-bottom: 11px;
   }
 }
