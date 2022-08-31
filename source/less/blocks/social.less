@@ -4,6 +4,10 @@
   list-style-type: none;
   display: flex;
   justify-content: center;
+
+  @media (min-width: 768px) {
+    margin-left: 25px;
+  }
 }
 
 .social__item + .social__item {
@@ -12,24 +16,13 @@
 
 .social__link svg {
   fill: #666666;
-}
 
-/*.social-button {
-	background-color: #FFFFFF;
-}
+  &:hover {
+    fill: @basic_green;
+  }
 
-.social-button svg {
-	fill: #83B3D3;
+  &:active {
+    fill: @basic_green;
+    opacity: 0.3;
+  }
 }
-
-.social-button:hover svg {
-	fill: #68A2CA;
-}
-
-.social-button:focus svg {
-	fill: #68A2CA;
-}
-
-.social-button:active svg {
-	fill: rgba(104, 162, 202, 0.3);
-}*/

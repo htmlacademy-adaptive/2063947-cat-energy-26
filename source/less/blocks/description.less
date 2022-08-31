@@ -24,12 +24,14 @@
   font-size: 36px;
   line-height: 40px;
   margin: 0;
+  margin-left: 1px;
   padding-bottom: 40px;
 
   @media (min-width: 768px) {
     font-size: 60px;
     line-height: 60px;
     padding-bottom: 32px;
+    padding-top: 4px;
   }
 
   @media (min-width: 1440px) {
@@ -44,6 +46,7 @@
   line-height: 18px;
   margin: 0;
   margin-left: 20px;
+  margin-top: 3px;
 
 
   @media (min-width: 768px) {
@@ -54,6 +57,14 @@
   }
 }
 
+.description__text br {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}
+
 .description__list {
   margin: 0;
   padding: 0;
@@ -61,8 +72,8 @@
 
   @media (min-width: 768px) {
     display: grid;
-    grid-template-columns: 250px 250px; /*взяла среднее значение*/
-    column-gap: 140px; /*взяла среднее значение*/
+    grid-template-columns: 250px 250px;
+    column-gap: 133px;
     row-gap: 37px;
     counter-reset: my-counter;
   }
@@ -113,7 +124,7 @@
 }
 
 .description__item svg {
-  width: calc(100% - 125px);
+  flex-shrink: 0;
 
   @media (min-width: 768px) {
     width: 83px;

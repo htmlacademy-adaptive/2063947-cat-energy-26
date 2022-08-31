@@ -36,8 +36,8 @@
 .example-toggle__range {
   position: absolute;
   content: "";
-  top: 50%;
-  left: 119px;
+  top: 43%;
+  left: 140px;
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
@@ -45,6 +45,15 @@
   background-color: #ffffff;
   border: 2px solid #666666;
   z-index: 1;
+
+  &:hover {
+    border: 2px solid @basic_green;
+  }
+
+  &:active {
+    border: 2px solid @basic_green;
+    opacity: 0.3;
+  }
 
   @media (min-width: 768px) {
     top: 255px;
@@ -69,13 +78,31 @@
   }
 }
 
-.example-toggle__range::after {
+.example-toggle__range:hover::before {
+  background: linear-gradient(180deg, #68b738 0%, #68b738 calc(50% - 20px), transparent calc(50% - 20px), transparent calc(50% + 20px), #68b738 calc(50% + 20px), #68b738 100%);
+}
+
+.example-toggle__range:active::before {
+  background: linear-gradient(180deg, #68b738 0%, #68b738 calc(50% - 20px), transparent calc(50% - 20px), transparent calc(50% + 20px), #68b738 calc(50% + 20px), #68b738 100%);
+  opacity: 0.6;
+}
+
+.example-toggle__range svg {
   content: "";
   position: absolute;
-  background-image: url("../img/toggle-triangles.svg");
   left: 6px;
   top: 9px;
   width: 24px;
   height: 18px;
+  fill: #666666;
+
+  &:hover {
+    fill: @basic_green;
+  }
+
+  &:active {
+    fill: @basic_green;
+    opacity: 0.3;
+  }
 }
 

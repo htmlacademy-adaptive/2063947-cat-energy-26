@@ -1,8 +1,5 @@
 .copyright {
   width: 281px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 0 auto;
 
   @media (min-width: 768px) {
@@ -17,4 +14,33 @@
   line-height: 18px;
   color: #444444;
   margin: 0;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: -5px;
+    margin-left: -1px;
+  }
+}
+
+.copyright__link {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__link svg {
+  fill: #666666;
+
+  &:hover {
+    fill: @basic_green;
+  }
+
+  &:active {
+    fill: @basic_green;
+    opacity: 0.3;
+  }
 }

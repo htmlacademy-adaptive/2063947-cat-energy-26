@@ -1,5 +1,5 @@
 .example {
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
   background-color: #eaeaea;
 
@@ -39,9 +39,14 @@
 
 .example__wrapper-toggle {
   padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
 
   @media (min-width: 768px) {
+    padding-right: 0;
     padding-bottom: 100px;
+    padding-left: 0;
   }
 
   @media (min-width: 1440px) {
@@ -68,17 +73,25 @@
   color: #444444;
   margin: 0;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
 
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 24px;
     margin-top: 63px;
-    margin-bottom: 54px;
+    margin-bottom: 69px;
   }
 
   @media (min-width: 1440px) {
     margin-top: 146px;
     margin-bottom: 69px;
+  }
+}
+
+.example__text br {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
   }
 }

@@ -12,8 +12,10 @@
 
     <header class="main-header">
       <a class="main-header__logo logo" href="index.html">
-        <img class="logo__image" src="./img/logo.svg" width="191" height="38" alt="Логотип CAT ENERGY.">
-        <img class="logo__together" src="./img/logo-together.svg" width="174" height="52" alt="Логотип CAT ENERGY.">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="logo__image" src="./img/logo-mobile.svg" width="191" height="38" alt="Логотип CAT ENERGY.">
+        </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--with-js">
         <button class="main-nav__toggle" type="button">
@@ -185,7 +187,7 @@
 
       <div class="main-footer__wrapper">
 
-        <a class="main-footer__logo logo-text">
+        <a class="main-footer__logo logo-text" href="index.html">
           <img class="logo-text__image" src="./img/logo-text.svg" width="128" height="24" alt="Надпись CAT ENERGY.">
         </a>
 
@@ -246,8 +248,8 @@
         </div>
 
         <div class="main-footer__copyright copyright">
-          <p class="copyright__text">HTML Academy</p>
-          <a class="copyright__link">
+          <a class="copyright__link" href="https://htmlacademy.ru/">
+            <p class="copyright__text">HTML Academy</p>
             <img src="./img/htmlacademy-grey.svg" width="27" height="34" alt="HTML Academy.">
           </a>
         </div>
