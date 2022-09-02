@@ -1,5 +1,5 @@
 .example {
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
   background-color: #eaeaea;
 
@@ -19,12 +19,13 @@
     display: flex;
     justify-content: space-between;
     width: 1220px;
-    padding-bottom: 75px;
+    padding-bottom: 70px;
     margin: 0 auto;
   }
 }
 
 .example__wrapper-text {
+  position: relative;
   padding: 25px 20px 20px 20px;
 
   @media (min-width: 768px) {
@@ -39,9 +40,14 @@
 
 .example__wrapper-toggle {
   padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  padding-left: 20px;
 
   @media (min-width: 768px) {
-    padding-bottom: 100px;
+    padding-right: 0;
+    padding-bottom: 95px;
+    padding-left: 0;
   }
 
   @media (min-width: 1440px) {
@@ -61,24 +67,49 @@
   }
 }
 
+.example__title::before {
+  @media (min-width: 768px) {
+    position: absolute;
+    content: "";
+    width: 768px;
+    height: 1px;
+    top: -1px;
+    left: 0;
+    background-image: url("../img/divider-tablet.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .example__text {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
   margin: 0;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 41px;
+  margin-bottom: 35px;
 
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 24px;
     margin-top: 63px;
-    margin-bottom: 54px;
+    margin-bottom: 69px;
   }
 
   @media (min-width: 1440px) {
     margin-top: 146px;
-    margin-bottom: 69px;
+    margin-bottom: 83px;
+  }
+}
+
+.example__text br {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
   }
 }

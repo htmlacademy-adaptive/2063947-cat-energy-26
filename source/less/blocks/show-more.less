@@ -1,3 +1,7 @@
+.show-more {
+  position: relative;
+}
+
 .show-more__wrapper {
   padding: 53px 20px 25px 21px;
 
@@ -7,6 +11,25 @@
 
   @media (min-width: 1440px) {
     padding: 165px 38px 41px 38px;
+  }
+}
+
+.show-more__wrapper::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/show-more.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+
+  @media (min-width: 768px) {
+    top: 52px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -66,4 +89,13 @@
   @media (min-width: 1440px) {
     min-width: 168px;
   }
+}
+
+.show-more__button:hover {
+  background-color: #ebebeb;
+}
+
+.show-more__button:active {
+  background-color: #ebebeb;
+  color: rgba(68, 68, 68, 0.3);
 }

@@ -73,7 +73,6 @@
 .main-nav__wrapper {
   @media (min-width: 768px) {
     width: 440px;
-
   }
 
   @media (min-width: 1440px) {
@@ -111,9 +110,13 @@
   text-decoration: none;
   border-top: 1px solid #e6e6e6;
 
-  /*&:hover {
-    opacity: 0.8;
-  }*/
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: 768px) {
     padding-top: 0;
@@ -122,17 +125,27 @@
     font-size: 18px;
     line-height: 24px;
     border-top: none;
-    margin-top: 2px;
+    margin-top: 3px;
+    margin-left: -1px;
   }
 
   @media (min-width: 1440px) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: -2px;
   }
 }
 
 .main-nav__list--white a {
-  @media (min-width: 1440px){
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: 1440px) {
     color: #ffffff;
   }
 }
@@ -146,7 +159,7 @@
         content: "";
         position: absolute;
         right: 0;
-        bottom: -8px;
+        bottom: -10px;
         left: 0;
         height: 2px;
         background: #68b738;
@@ -171,6 +184,22 @@
   }
 }
 
+.main-nav__item:nth-child(1) {
+  @media (min-width: 1440px) {
+    margin-left: -1px;
+  }
+}
+
+.main-nav__item:nth-child(2) {
+  @media (min-width: 768px) {
+    margin-left: -4px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 2px;
+  }
+}
+
 // Стандартное меню c js.
 .main-nav--with-js .main-nav__list {
   @media (max-width: 767px) {
@@ -186,12 +215,10 @@
 
 // Стандартное меню без js.
 @media (max-width: 767px) {
-  /*.main-nav:not(.main-nav--with-js) .main-nav__toggle {
-    display: none;
-  }*/
   .main-nav--nojs .main-nav__toggle {
     display: none;
   }
+
   .main-nav--nojs .main-nav__wrapper {
     position: static;
     min-height: 0;

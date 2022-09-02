@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CAT ENERGY</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./favicon.png">
   </head>
 
   <body class="page__body">
 
     <header class="main-header">
-      <a class="main-header__logo logo">
-        <img class="logo__image" src="./img/logo.svg" width="191" height="38" alt="Логотип CAT ENERGY.">
-        <img class="logo__together" src="./img/logo-together.svg" width="174" height="52" alt="Логотип CAT ENERGY.">
+      <a class="main-header__logo logo" href="#">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="logo__image" src="./img/logo-mobile.svg" width="191" height="38" alt="Логотип CAT ENERGY.">
+        </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--with-js">
         <button class="main-nav__toggle" type="button">
@@ -44,7 +47,11 @@
           <h1 class="main-container__title">Функциональное питание для котов</h1>
           <p class="main-container__text">Занялся собой? Займись котом!</p>
         </div>
-        <img class="main-container__image" src="./img/index-mobile.svg" width="280" height="270" alt="Фото продукта.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./img/index-can-desktop.png 1x, ./img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="./img/index-can-tablet.png 1x, ./img/index-can-tablet@2x.png 2x">
+          <img class="main-container__image" src="./img/index-can-mobile.png" width="280" height="270" srcset="./img/index-can-mobile@2x.png 2x" alt="Фото продукта.">
+        </picture>
         <a class="button main-container__button" href="form.html">Подобрать программу</a>
       </div>
 
@@ -62,8 +69,9 @@
             <div class="change-weight__catalog">
               <a class="change-weight__catalog-link" href="#">
                 <span class="change-weight__catalog-title">Каталог slim</span>
-                <svg width="32" height="12" viewBox="0 0 32 12" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="#000" stroke-width="2" d="M0 6h18"/><path d="m24 6-6.75 5.2V.8L24 6Z" fill="#000"/>
+                <svg preserveAspectRatio="none" width="24" height="12" viewBox="0 0 24 12" xmlns="http://www.w3.org/2000/svg">
+                  <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
+                  <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
                 </svg>
               </a>
             </div>
@@ -76,14 +84,15 @@
               <img class="change-weight__image change-weight__image--gain" src="./img/gain-weight.svg" width="67" height="50" alt="Сильный кот.">
               <h2 class="change-weight__title">Набор массы</h2>
             </div>
-            <p class="change-weight__text">Заработать авторитет среди дворовых котов и даже собак?
+            <p class="change-weight__text change-weight__text--gain">Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
             <div class="change-weight__catalog">
               <a class="change-weight__catalog-link" href="#">
-                <span class="change-weight__catalog-title">Каталог pro</span>
-                <svg width="32" height="12" viewBox="0 0 32 12" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="#000" stroke-width="2" d="M0 6h18"/><path d="m24 6-6.75 5.2V.8L24 6Z" fill="#000"/>
+                <span class="change-weight__catalog-title change-weight__catalog-title--gain">Каталог pro</span>
+                <svg preserveAspectRatio="none" width="24" height="12" viewBox="0 0 24 12" xmlns="http://www.w3.org/2000/svg">
+                  <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
+                  <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
                 </svg>
               </a>
             </div>
@@ -96,17 +105,17 @@
         <div class="description__wrapper">
           <h2 class="description__title">Как это работает</h2>
           <ul class="description__list">
-            <li class="description__item description__item--healthy">
+            <li class="description__item">
               <p class="description__text">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
-            <li class="description__item description__item--powder">
+            <li class="description__item">
               <p class="description__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
-            <li class="description__item description__item--economy">
+            <li class="description__item">
               <p class="description__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
-            <li class="description__item description__item--result">
-              <p class="description__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <li class="description__item">
+              <p class="description__text">Уже через месяц наслаждайтесь изменениями к лучшему<br> вашего питомца!</p>
             </li>
           </ul>
         </div>
@@ -119,31 +128,40 @@
           <div class="example__wrapper-text">
             <h2 class="example__title">Живой пример</h2>
             <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и<br> по-прежнему спит по 16 часов в день.
             </p>
             <div class="example-results__wrapper">
               <dl class="example-results">
-                <div class="example-results__item">
+                <div class="example-results__item example-results__item--weight">
                   <dt class="example-results__number">5 кг</dt>
-                  <dd class="example-results__description">Снижение веса</dd>
+                  <dd class="example-results__description">Снижение<br> веса</dd>
                 </div>
-                <div class="example-results__item">
+                <div class="example-results__item example-results__item--time">
                   <dt class="example-results__number">60 дней</dt>
-                  <dd class="example-results__description">Затрачено времени</dd>
+                  <dd class="example-results__description">Затрачено<br> времени</dd>
                 </div>
               </dl>
-              <p class="example-results__sum">Затраты на питание: 15 000 руб.</p>
+              <p class="example-results__sum">Затраты на питание: <span class="example-results__sum-additional">15 000 руб.</span></p>
             </div>
           </div>
 
           <div class="example__wrapper-toggle example-toggle">
             <div class="example-toggle__image example-toggle__image--before">
-              <img src="./img/cat-before.png" width="280" height="256" alt="Фото кота до программы.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/cat-before-tablet.png 1x, ./img/cat-before-tablet@2x.png 2x">
+                <img src="./img/cat-before-mobile.png" width="280" height="256" srcset="./img/cat-before-mobile@2x.png 2x" alt="Фото кота до программы.">
+              </picture>
             </div>
             <div class="example-toggle__image example-toggle__image--after">
-              <img src="./img/cat-after.png" width="280" height="256" alt="Фото кота после программы.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/cat-after-tablet.png 1x, ./img/cat-after-tablet@2x.png 2x">
+                <img src="./img/cat-after-mobile.png" width="280" height="256" srcset="./img/cat-after-mobile@2x.png 2x" alt="Фото кота после программы.">
+              </picture>
             </div>
             <button class="example-toggle__range" type="button">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path d="M8 0 0 9l8 9V0ZM24 9l-8-9v18l8-9Z" fill=""/>
+              </svg>
               <span class="visually-hidden">Было и стало.</span>
             </button>
           </div>
@@ -158,18 +176,25 @@
 
       <div class="main-footer__map">
         <div class="main-footer__contacts contacts contacts--white">
-          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <h3 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h3>
+          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8<br>
+            <span class="contacts__text-city">Санкт-Петербург</span>
+          </p>
         </div>
 
         <div class="main-footer__location location">
-          <img class="location__image" src="./img/location-mobile.jpg" width="320" height="362" alt="Месторасположение офиса.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./img/location-desktop.jpg 1x, ./img/location-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="./img/location-tablet.jpg 1x, ./img/location-tablet@2x.jpg 2x">
+            <img class="location__image" src="./img/location-mobile.jpg" width="320" height="362" srcset="./img/location-mobile@2x.jpg 2x" alt="Месторасположение офиса.">
+          </picture>
         </div>
+
       </div>
 
       <div class="main-footer__wrapper">
 
-        <a class="main-footer__logo logo-text">
+        <a class="main-footer__logo logo-text" href="index.html">
           <img class="logo-text__image" src="./img/logo-text.svg" width="128" height="24" alt="Надпись CAT ENERGY.">
         </a>
 
@@ -230,9 +255,11 @@
         </div>
 
         <div class="main-footer__copyright copyright">
-          <p class="copyright__text">HTML Academy</p>
-          <a class="copyright__link">
-            <img src="./img/htmlacademy-grey.svg" width="27" height="34" alt="HTML Academy.">
+          <a class="copyright__link" href="https://htmlacademy.ru/">
+            <p class="copyright__text">HTML Academy</p>
+            <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z" fill=""/>
+            </svg>
           </a>
         </div>
 

@@ -1,7 +1,7 @@
 .description__wrapper {
   width: 280px;
   padding-top: 0;
-  padding-bottom: 49px;
+  padding-bottom: 52px;
   margin: 0 auto;
 
   @media (min-width: 768px) {
@@ -24,12 +24,14 @@
   font-size: 36px;
   line-height: 40px;
   margin: 0;
+  margin-left: 1px;
   padding-bottom: 40px;
 
   @media (min-width: 768px) {
     font-size: 60px;
     line-height: 60px;
     padding-bottom: 32px;
+    padding-top: 1px;
   }
 
   @media (min-width: 1440px) {
@@ -43,43 +45,155 @@
   font-size: 14px;
   line-height: 18px;
   margin: 0;
+  margin-left: 80px;
+  margin-top: 3px;
+
 
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 24px;
+    margin-top: 151px;
+    margin-left: 0;
+  }
+}
+
+.description__text br {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
   }
 }
 
 .description__list {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: 768px) {
     display: grid;
-    grid-template-columns: 250px 250px; /*взяла среднее значение*/
-    column-gap: 140px; /*взяла среднее значение*/
+    grid-template-columns: 250px 250px;
+    column-gap: 133px;
     row-gap: 37px;
+    counter-reset: my-counter;
   }
 
   @media (min-width: 1440px) {
-    grid-template-columns: 245px 245px 245px 245px; /*взяла среднее значение*/
-    column-gap: 78px; /*взяла среднее значение*/
+    grid-template-columns: 245px 245px 245px 245px;
+    column-gap: 78px;
     row-gap: 0;
   }
 }
 
+.description__item::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  top: -2px;
+  left: 0;
+  background-color: @basic_green;
+  background-image: url("../img/description-item-1.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (min-width: 768px) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
+}
+
+.description__item:nth-child(2)::after {
+  background-image: url("../img/description-item-2.svg");
+  top: -3px;
+
+  @media (min-width: 768px) {
+    top: 39px;
+  }
+
+  @media (min-width: 1440px) {
+    left: 1px;
+  }
+}
+
+.description__item:nth-child(3)::after {
+  background-image: url("../img/description-item-3.svg");
+
+  @media (min-width: 1440px) {
+    left: 4px;
+  }
+}
+
+.description__item:nth-child(4)::after {
+  background-image: url("../img/description-item-4.svg");
+
+  @media (min-width: 1440px) {
+    left: 6px;
+  }
+}
+
 .description__item {
-  margin-left: 20px;
+  position: relative;
 
   @media (min-width: 768px) {
     margin-left: 0;
-    padding-top: 151px;
     height: 280px;
+    position: relative;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
   }
 
   @media (min-width: 1440px) {
     width: 250px;
+  }
+}
+
+.description__item::before {
+  @media (min-width: 768px) {
+    position: absolute;
+    display: block;
+    counter-increment: my-counter;
+    content: counter(my-counter);
+    top: 0;
+    right: 25px;
+    z-index: -1;
+
+    @media (min-width: 1440px) {
+      right: 27px;
+    }
+  }
+}
+
+.description__item:nth-child(2)::before {
+  @media (min-width: 768px) {
+    right: 5px;
+  }
+
+  @media (min-width: 1440px) {
+    right: 4px;
+  }
+}
+
+.description__item:nth-child(3)::before {
+  @media (min-width: 768px) {
+    right: 3px;
+  }
+
+  @media (min-width: 1440px) {
+    right: 0;
+  }
+}
+
+.description__item:nth-child(4)::before {
+  @media (min-width: 768px) {
+    right: 0;
+  }
+
+  @media (min-width: 1440px) {
+    right: -4px;
   }
 }
 
@@ -91,3 +205,48 @@
   }
 }
 
+.description__item svg {
+  flex-shrink: 0;
+
+  @media (min-width: 768px) {
+    width: 83px;
+    height: 80px;
+  }
+}
+
+.description__item:nth-child(2) .description__text {
+  margin-top: 26px;
+
+  @media (min-width: 768px) {
+    margin-top: 151px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 1px;
+  }
+}
+
+.description__item:nth-child(3) .description__text {
+  margin-top: 26px;
+
+  @media (min-width: 768px) {
+    margin-top: 151px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 3px;
+  }
+}
+
+.description__item:nth-child(4) .description__text {
+  margin-top: 26px;
+
+  @media (min-width: 768px) {
+    margin-top: 151px;
+    margin-left: 1px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 5px;
+  }
+}

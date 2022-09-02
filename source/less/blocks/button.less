@@ -5,9 +5,18 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #5eaa2f;
+  background-color: @basic_green;
   color: #ffffff;
   cursor: pointer;
   border: none;
+}
+
+.button:hover {
+  background-color: @basic_green_hover;
+}
+
+.button:active {
+  background-color: @basic_green_hover;
+  color: rgba(255, 255, 255, 0.3);
 }
 
