@@ -7,7 +7,7 @@
 }
 
 .gift__wrapper {
-  background-image: url("../img/gift-background.jpg");
+  background-image: url("../img/gift-background-mobile.jpg");
   background-repeat: no-repeat;
   width: 280px;
   height: 290px;
@@ -15,18 +15,35 @@
   margin-top: 35px;
   margin-bottom: 35px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-background-mobile@2x.jpg");
+    background-size: cover;
+  }
+
   @media (min-width: 768px) {
+    background-image: url("../img/gift-background-tablet.jpg");
     width: 707px;
     height: 200px;
     margin-top: 0;
     margin-bottom: 76px;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-background-tablet@2x.jpg");
+      background-size: cover;
+    }
   }
 
   @media (min-width: 1440px) {
+    background-image: url("../img/gift-background-desktop.jpg");
     width: 245px;
     height: 289px;
     margin-bottom: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-background-desktop@2x.jpg");
+      background-size: cover;
+    }
   }
 }
 

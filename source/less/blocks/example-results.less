@@ -15,6 +15,7 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   @media (min-width: 768px) {
     margin-bottom: 0;
@@ -31,6 +32,45 @@
 
   @media (min-width: 768px) {
     width: 162px;
+  }
+}
+
+.example-results__item--weight .example-results__description {
+  margin-left: -3px;
+}
+
+.example-results__item--weight::before {
+  position: absolute;
+  content: "";
+  width: 124px;
+  height: 56px;
+  top: -15px;
+  left: 0;
+  background-image: url("../img/example-border-mobile.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    width: 162px;
+    height: 72px;
+    background-image: url("../img/example-border-tablet-weight.svg");
+  }
+}
+
+.example-results__item--time::before {
+  position: absolute;
+  content: "";
+  width: 124px;
+  height: 56px;
+  top: -15px;
+  left: 156px;
+  background-image: url("../img/example-border-mobile.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    width: 162px;
+    height: 72px;
+    left: 203px;
+    background-image: url("../img/example-border-tablet-time.svg");
   }
 }
 
@@ -94,5 +134,13 @@
   @media (min-width: 1440px) {
     width: 436px;
     text-align: left;
+    margin-top: -3px;
+    margin-left: 1px;
+  }
+}
+
+.example-results__sum-additional {
+  @media (min-width: 1440px) {
+    margin-left: 61px;
   }
 }
