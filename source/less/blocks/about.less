@@ -12,6 +12,38 @@
 .about__group {
   display: flex;
   justify-content: space-between;
+  width: 142px;
+  margin-left: 21px;
+
+  @media (min-width: 768px) {
+    width: 249px;
+    margin-left: 1px;
+    position: relative;
+  }
+
+  @media (min-width: 1440px) {
+    width: 167px;
+  }
+}
+
+.about__group::after {
+  @media (min-width: 768px) {
+    position: absolute;
+    content: "";
+    width: 250px;
+    bottom: -6px;
+    left: -1px;
+    border-top: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: 1440px) {
+    position: absolute;
+    content: "";
+    width: 169px;
+    bottom: -9px;
+    left: 0;
+    border-top: 1px solid #cdcdcd;
+  }
 }
 
 .about__group + .about__group {
@@ -21,6 +53,16 @@
 
   @media (min-width: 1440px) {
     margin-top: 16px;
+  }
+}
+
+.about__parameter {
+  @media (min-width: 768px) {
+    margin-bottom: 2px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 1px;
   }
 }
 
