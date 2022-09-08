@@ -22,12 +22,12 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
-  padding-left: 22px;
+  margin-left: 42px;
 
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
-    padding-left: 32px;
+    margin-left: 52px;
   }
 }
 
@@ -54,6 +54,14 @@
   padding: 0;
 }
 
+.purpose__input:disabled ~ .purpose__label {
+  opacity: 0.3;
+}
+
+.purpose__input:disabled ~ .purpose__mark {
+  opacity: 0.3;
+}
+
 .purpose__mark {
   position: absolute;
   left: 0;
@@ -62,6 +70,10 @@
   background: #ffffff;
   border: 1px solid #cdcdcd;
   border-radius: 50%;
+
+  &:hover {
+    border: 1px solid #bababa;
+  }
 
   @media (min-width: 768px) {
     width: 40px;
@@ -77,10 +89,8 @@
   left: 7px;
   width: 14px;
   height: 14px;
-  background-image: url("../img/radio.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: transparent;
+  border-radius: 50%;
+  background: @basic_green;
 
   @media (min-width: 768px) {
     top: 9px;
