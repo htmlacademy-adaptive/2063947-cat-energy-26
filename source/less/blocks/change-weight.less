@@ -155,6 +155,22 @@
   }
 }
 
+//попытка сделать длинную стрелочку при hover
+.change-weight__catalog {
+  position: relative;
+}
+
+.change-weight__catalog::after {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 12px;
+  top: 0;
+  right: 0;
+  background-image: url("../img/arrow-long.svg");
+  background-repeat: no-repeat;
+}
+
 .change-weight__catalog-title {
   font-size: 16px;
   line-height: 16px;
