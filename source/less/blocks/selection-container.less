@@ -17,6 +17,10 @@
   }
 }
 
+.selection-container__inner-wrapper {
+  position: relative;
+}
+
 .selection-container__title {
   font-weight: 400;
   font-size: 36px;
@@ -32,6 +36,17 @@
 
   @media (min-width: 1440px) {
     margin-bottom: 56px;
+  }
+}
+
+.selection-container__title::before {
+  @media (max-width: 767px) {
+    position: absolute;
+    content: "";
+    width: 320px;
+    top: 0;
+    left: 0;
+    border-top: 1px solid red;
   }
 }
 
