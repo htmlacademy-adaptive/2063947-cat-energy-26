@@ -155,22 +155,6 @@
   }
 }
 
-//попытка сделать длинную стрелочку при hover
-.change-weight__catalog {
-  position: relative;
-}
-
-.change-weight__catalog::after {
-  position: absolute;
-  content: "";
-  width: 32px;
-  height: 12px;
-  top: 0;
-  right: 0;
-  background-image: url("../img/arrow-long.svg");
-  background-repeat: no-repeat;
-}
-
 .change-weight__catalog-title {
   font-size: 16px;
   line-height: 16px;
@@ -199,23 +183,35 @@
 .change-weight__catalog-link {
   text-decoration: none;
   color: #000000;
+  position: relative;
 }
 
-.change-weight__catalog-link svg {
+.change-weight__catalog-link::after {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 12px;
+  top: 7px;
+  right: -36px;
+  background-image: url("../img/arrow-long.svg");
+  background-repeat: no-repeat;
+  background-position: -8px center;
+
   @media (min-width: 768px) {
-    margin-bottom: 3px;
+    top: 5px;
   }
 
   @media (min-width: 1440px) {
-    margin-left: 2px;
+    top: 3px;
+    right: -37px;
   }
+}
 
-  &:hover {
-    width: 32px;
-  }
+.change-weight__catalog-link:hover::after {
+  background-position: 0 center;
+}
 
-  &:active {
-    width: 32px;
-    opacity: 0.25;
-  }
+.change-weight__catalog-link:active::after {
+  background-position: 0 center;
+  opacity: 0.25;
 }

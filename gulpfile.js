@@ -4,6 +4,14 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import del from 'del';
+import htmlmin from 'gulp-htmlmin';
+import squoosh from 'gulp-libsquoosh';
+import rename from 'gulp-rename';
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
+import terser from 'gulp-terser';
+import csso from 'postcss-csso';
 
 // Styles
 
@@ -17,6 +25,13 @@ export const styles = () => {
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
+
+// HTML
+
+export const html = () => {
+  return gulp.src("source/*.html")
+  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(gulp.dest("build"));
 
 // Server
 
