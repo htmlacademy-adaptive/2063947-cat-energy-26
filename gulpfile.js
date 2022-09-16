@@ -22,7 +22,7 @@ export const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
@@ -42,7 +42,7 @@ const scripts = () => {
   .pipe(gulp.dest("build/js"));
 }
 
-// Images
+// Images + WebP
 
 const optimizeImages = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
@@ -50,26 +50,16 @@ const optimizeImages = () => {
   .pipe(gulp.dest("build/img"));
 }
 
-const copyImages = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-  .pipe(gulp.dest("build/img"));
-}
-
-// WebP
-
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
   .pipe(squoosh({webp: {}}))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("source/img"));
 }
 
-// SVG - оптимизировать не надо? Т.к. у меня уже все svg включены в спрайт...
-
-/*const svg = () => {
-  return gulp.src("source/img/*.svg")
-  .pipe(svgo())
+const copyImages = () => {
+  return gulp.src("source/img/**/*.{jpg,png,webp,svg}")
   .pipe(gulp.dest("build/img"));
-}*/
+}
 
 // Sprite
 
@@ -87,6 +77,7 @@ const copy = (done) => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
+    "source/*.png"
   ], {
     base: "source"
   })
@@ -94,10 +85,10 @@ const copy = (done) => {
   done();
 }
 
-// Clean - не срабатывает
+// Clean
 
 const clean = () => {
-  return { deleteAsync }("build");
+  return deleteAsync('build');
 }
 
 // Server
@@ -105,7 +96,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -114,31 +105,27 @@ const server = (done) => {
   done();
 }
 
-// Watcher - нужно ли сюда дописать scripts?
+// Watcher
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
+  gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 // Build
 
-const build = gulp.series(
+export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    svg,
-    sprite,
-    createWebp
-  ),
+  gulp.parallel(styles, html, scripts, sprite, createWebp)
 );
 
-
-
 export default gulp.series(
-  html, scripts, optimizeImages, createWebp, sprite, copy, clean, styles, server, watcher
+  clean,
+  copy,
+  gulp.parallel(styles, html, copyImages, scripts, sprite, createWebp),
+  server,
+  watcher
 );
