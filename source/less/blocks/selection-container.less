@@ -1,6 +1,6 @@
 .selection-container__wrapper {
   width: 280px;
-  padding-top: 27px;
+  padding-top: 41px;
   padding-bottom: 32px;
   margin: 0 auto;
 
@@ -15,6 +15,10 @@
     padding-top: 77px;
     padding-bottom: 82px;
   }
+}
+
+.selection-container__inner-wrapper {
+  position: relative;
 }
 
 .selection-container__title {
@@ -32,6 +36,17 @@
 
   @media (min-width: 1440px) {
     margin-bottom: 56px;
+  }
+}
+
+.selection-container__title::before {
+  @media (max-width: 767px) {
+    position: absolute;
+    content: "";
+    width: 320px;
+    top: 0;
+    left: 0;
+    border-top: 1px solid red;
   }
 }
 

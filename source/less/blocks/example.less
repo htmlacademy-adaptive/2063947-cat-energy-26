@@ -2,6 +2,7 @@
   width: 320px;
   margin: 0 auto;
   background-color: #eaeaea;
+  position: relative;
 
   @media (min-width: 768px) {
     width: 708px;
@@ -10,7 +11,23 @@
 
   @media (min-width: 1440px) {
     width: 1440px;
-    background-color: #f2f2f2;
+  }
+}
+
+.example::before {
+  @media (min-width: 768px) {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: calc(100% - 620px);
+    top: 620px;
+    left: calc((100vw - 100%) / -2);
+    background-color: #eaeaea;
+  }
+
+  @media (min-width: 1440px) {
+    height: calc(100% - 135px);
+    top: 135px;
   }
 }
 
@@ -76,8 +93,12 @@
     top: -1px;
     left: -30px;
     right: 30px;
-    background-image: url("../img/divider-tablet-example.svg"); /* поменять картинку */
+    background-image: url("../img/divider-tablet-example.svg");
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: 1440px) {
+    background-image: none;
   }
 }
 

@@ -88,6 +88,7 @@
   padding-bottom: 16px;
   padding-left: 15px;
   flex-grow: 1;
+  outline: none;
 
   &:hover {
     border: 1px solid #cdcdcd;
@@ -118,10 +119,6 @@
   height: 14px;
   stroke: #222222;
 
-  &:hover {
-    stroke: @basic_green;
-  }
-
   &--error {
     stroke: #ff8282;
   }
@@ -132,6 +129,14 @@
   }
 }
 
+.cat-contacts__answer:focus + .cat-contacts__answer-email {
+  stroke: @basic_green;
+}
+
+.cat-contacts__answer:focus + .cat-contacts__answer-phone {
+  stroke: @basic_green;
+}
+
 .cat-contacts__answer-phone {
   position: absolute;
   content: "";
@@ -140,10 +145,6 @@
   width: 20px;
   height: 20px;
   fill: #222222;
-
-  &:hover {
-    fill: @basic_green;
-  }
 
   &--error {
     fill: #ff8282;
