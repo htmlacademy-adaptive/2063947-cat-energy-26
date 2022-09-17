@@ -1,7 +1,7 @@
 .purpose {
   margin: 0;
   padding: 0;
-  margin-bottom: 46px;
+  margin-bottom: 49px;
   border: none;
 
   @media (min-width: 768px) {
@@ -22,7 +22,8 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
-  margin-left: 42px;
+  margin-left: 45px;
+  margin-top: 2px;
 
   @media (min-width: 768px) {
     font-size: 20px;
@@ -37,9 +38,19 @@
   list-style-type: none;
 }
 
-.purpose__item + .purpose__item {
+.purpose__item:nth-child(1) {
   margin-top: 13px;
+}
 
+.purpose__item:nth-child(2) {
+  margin-top: 21px;
+}
+
+.purpose__item:nth-child(3) {
+  margin-top: 18px;
+}
+
+.purpose__item + .purpose__item {
   @media (min-width: 768px) {
     margin-top: 20px;
   }
@@ -60,6 +71,10 @@
 
 .purpose__input:disabled ~ .purpose__mark {
   opacity: 0.3;
+}
+
+.purpose__input:focus ~ .purpose__mark {
+  outline: 2px solid #000000;
 }
 
 .purpose__mark {

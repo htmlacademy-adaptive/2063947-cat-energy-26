@@ -1,8 +1,9 @@
 .cat-contacts {
   margin: 0;
   padding: 0;
-  margin-bottom: 24px;
+  margin-bottom: 21px;
   border: none;
+  position: relative;
 
   @media (min-width: 768px) {
     margin-bottom: 65px;
@@ -35,7 +36,7 @@
 }
 
 .cat-contacts__item + .cat-contacts__item {
-  margin-top: 14px;
+  margin-top: 9px;
 
   @media (min-width: 768px) {
     margin-top: 20px;
@@ -50,13 +51,35 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
+  margin-left: -3px;
+  position: relative;
 
   @media (min-width: 768px) {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
   }
+}
+
+.cat-contacts__title::before {
+  @media (max-width: 767px) {
+    position: absolute;
+    content: "";
+    width: 320px;
+    top: -26px;
+    left: -20px;
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.cat-contacts__title::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  top: 16px;
+  right: -20px;
+  border-top: 2px solid @basic_green;
 }
 
 .cat-contacts__question {
@@ -140,8 +163,8 @@
 .cat-contacts__answer-phone {
   position: absolute;
   content: "";
-  top: 13px;
-  right: 12px;
+  top: 15px;
+  right: 14px;
   width: 20px;
   height: 20px;
   fill: #222222;

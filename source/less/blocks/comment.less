@@ -1,7 +1,7 @@
 .comment {
   margin: 0;
   padding: 0;
-  margin-bottom: 23px;
+  margin-bottom: 18px;
   border: none;
 
   @media (min-width: 768px) {
@@ -17,12 +17,23 @@
   font-size: 24px;
   line-height: 26px;
   margin-bottom: 38px;
+  margin-left: -2px;
+  position: relative;
 
   @media (min-width: 768px) {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
   }
+}
+
+.comment__title::after {
+  position: absolute;
+  content: "";
+  width: 159px;
+  top: 16px;
+  right: -180px;
+  border-top: 2px solid @basic_green;
 }
 
 .comment__answer {
@@ -34,7 +45,7 @@
   min-width: 280px;
   min-height: 151px;
   border: 1px solid #e7e7e7;
-  padding-top: 10px;
+  padding-top: 8px;
   padding-left: 15px;
 
   @media (min-width: 768px) {

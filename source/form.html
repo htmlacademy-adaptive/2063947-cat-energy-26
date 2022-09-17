@@ -50,7 +50,7 @@
       </a>
       <nav class="main-nav main-nav--closed main-nav--with-js">
         <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Открыть меню.</span>
         </button>
 
         <div class="main-nav__wrapper">
@@ -158,28 +158,28 @@
               <ul class="additional__list">
                 <li class="additional__item">
                   <label class="additional__control">
-                    <input class="additional__input" type="checkbox" name="sweetener" checked disabled>
+                    <input class="additional__input visually-hidden" type="checkbox" name="sweetener" checked disabled>
                     <span class="additional__mark"></span>
                     <span class="additional__label">Сахарозаменитель</span>
                   </label>
                 </li>
                 <li class="additional__item">
                   <label class="additional__control">
-                    <input class="additional__input" type="checkbox" name="water">
+                    <input class="additional__input visually-hidden" type="checkbox" name="water">
                     <span class="additional__mark"></span>
                     <span class="additional__label">Питьевая вода</span>
                   </label>
                 </li>
                 <li class="additional__item">
                   <label class="additional__control">
-                    <input class="additional__input" type="checkbox" name="milk">
+                    <input class="additional__input visually-hidden" type="checkbox" name="milk">
                     <span class="additional__mark"></span>
                     <span class="additional__label">Молоко</span>
                   </label>
                 </li>
                 <li class="additional__item">
                   <label class="additional__control">
-                    <input class="additional__input" type="checkbox" name="vitamins">
+                    <input class="additional__input visually-hidden" type="checkbox" name="vitamins">
                     <span class="additional__mark"></span>
                     <span class="additional__label">Витамины</span>
                   </label>
@@ -203,19 +203,24 @@
     <footer class="main-footer">
 
       <div class="main-footer__map">
-        <div class="main-footer__contacts contacts contacts--white">
-          <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
-          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8<br>
-            <span class="contacts__text-city">Санкт-Петербург</span>
-          </p>
+        <div class="main-footer__map-wrapper">
+          <div class="main-footer__contacts contacts">
+            <h3 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h3>
+            <p class="contacts__text">ул. Большая Конюшенная, д. 19/8<br>
+              <span class="contacts__text-city">Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
 
         <div class="main-footer__location location">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="./img/location-desktop.jpg 1x, ./img/location-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="./img/location-tablet.jpg 1x, ./img/location-tablet@2x.jpg 2x">
-            <img class="location__image" src="./img/location-mobile.jpg" width="320" height="362" srcset="./img/location-mobile@2x.jpg 2x" alt="Месторасположение офиса.">
-          </picture>
+          <h2 class="visually-hidden">Как до нас добраться.</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002605!2d30.3208587154197!3d59.938719169055005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sca!4v1663354838357!5m2!1sru!2sca"
+            width="100%"
+            height="362"
+            allowfullscreen
+            title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+          </iframe>
         </div>
 
       </div>
@@ -234,7 +239,7 @@
                 <svg width="28" height="22" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#social-vkontakte"></use>
                 </svg>
-                <span class="visually-hidden">Мы в Вконтакте</span>
+                <span class="visually-hidden">Мы в Вконтакте.</span>
               </a>
             </li>
 
@@ -243,7 +248,7 @@
                 <svg width="28" height="22" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#social-youtube"></use>
                 </svg>
-                <span class="visually-hidden">Мы в Ютюбе</span>
+                <span class="visually-hidden">Мы в Ютюбе.</span>
               </a>
             </li>
 
@@ -252,7 +257,7 @@
                 <svg width="28" height="22" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#social-telegram"></use>
                 </svg>
-                <span class="visually-hidden">Мы в Телеграме</span>
+                <span class="visually-hidden">Мы в Телеграме.</span>
               </a>
             </li>
 

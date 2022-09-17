@@ -12,10 +12,23 @@
 }
 
 .selection-info__questions-wrapper {
+  position: relative;
+
   @media (min-width: 1440px) {
     display: flex;
     justify-content: space-between;
     margin-top: 66px;
     margin-bottom: 69px;
+  }
+}
+
+.selection-info__about::after {
+  @media (max-width: 767px) {
+    position: absolute;
+    content: "";
+    width: 320px;
+    bottom: 134px;
+    left: -20px;
+    border-top: 1px solid #cdcdcd;
   }
 }
