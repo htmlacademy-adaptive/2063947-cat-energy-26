@@ -11,7 +11,7 @@
 
   <body class="page__body">
 
-    <svg style="display: none">
+    <svg style="display: none;">
 
       <symbol viewBox="0 0 24 18" id="button-toggle">
         <path d="M8 0 0 9l8 9V0ZM24 9l-8-9v18l8-9Z" fill=""/>
@@ -46,7 +46,7 @@
       </a>
       <nav class="main-nav main-nav--closed main-nav--with-js">
         <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Открыть меню.</span>
         </button>
 
         <div class="main-nav__wrapper">
@@ -74,6 +74,9 @@
           <p class="main-container__text">Занялся собой? Займись котом!</p>
         </div>
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="./img/index-can-desktop.webp 1x, ./img/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/index-can-tablet.webp 1x, ./img/index-can-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./img/index-can-mobile.webp 1x, ./img/index-can-mobile@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="./img/index-can-desktop.png 1x, ./img/index-can-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="./img/index-can-tablet.png 1x, ./img/index-can-tablet@2x.png 2x">
           <img class="main-container__image" src="./img/index-can-mobile.png" width="280" height="270" srcset="./img/index-can-mobile@2x.png 2x" alt="Фото продукта.">
@@ -148,8 +151,8 @@
             <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
             Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и<br> по-прежнему спит по 16 часов в день.
             </p>
-            <div class="example-results__wrapper">
-              <dl class="example-results">
+            <div class="example-results">
+              <dl class="example-results__wrapper">
                 <div class="example-results__item example-results__item--weight">
                   <dt class="example-results__number">5 кг</dt>
                   <dd class="example-results__description">Снижение<br> веса</dd>
@@ -166,12 +169,16 @@
           <div class="example__wrapper-toggle example-toggle">
             <div class="example-toggle__image example-toggle__image--before">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/cat-before-tablet.webp 1x, ./img/cat-before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/cat-before-mobile.webp 1x, ./img/cat-before-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/cat-before-tablet.png 1x, ./img/cat-before-tablet@2x.png 2x">
                 <img src="./img/cat-before-mobile.png" width="280" height="256" srcset="./img/cat-before-mobile@2x.png 2x" alt="Фото кота до программы.">
               </picture>
             </div>
             <div class="example-toggle__image example-toggle__image--after">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/cat-after-tablet.webp 1x, ./img/cat-after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/cat-after-mobile.webp 1x, ./img/cat-after-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/cat-after-tablet.png 1x, ./img/cat-after-tablet@2x.png 2x">
                 <img src="./img/cat-after-mobile.png" width="280" height="256" srcset="./img/cat-after-mobile@2x.png 2x" alt="Фото кота после программы.">
               </picture>
@@ -200,7 +207,6 @@
             <span class="contacts__text-city">Санкт-Петербург</span>
           </p>
         </div>
-
         <div class="main-footer__location location">
           <picture>
             <source type="image/webp" media="(min-width: 1440px)" srcset="./img/location-desktop.webp 1x, ./img/location-desktop@2x.webp 2x">
@@ -211,7 +217,18 @@
             <img class="location__image" src="./img/location-mobile.jpg" width="320" height="362" srcset="./img/location-mobile@2x.jpg 2x" alt="Месторасположение офиса.">
           </picture>
         </div>
+      </div>
 
+      <div class="main-footer__google-map-wrapper">
+        <div class="main-footer__google-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002605!2d30.3208587154197!3d59.938719169055005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sca!4v1663354838357!5m2!1sru!2sca"
+            width="700"
+            height="362"
+            allowfullscreen
+            title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+          </iframe>
+        </div>
       </div>
 
       <div class="main-footer__wrapper">
@@ -228,7 +245,7 @@
                 <svg width="28" height="22" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#social-vkontakte"></use>
                 </svg>
-                <span class="visually-hidden">Мы в Вконтакте</span>
+                <span class="visually-hidden">Мы в Вконтакте.</span>
               </a>
             </li>
 
@@ -237,7 +254,7 @@
                 <svg width="28" height="22" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#social-youtube"></use>
                 </svg>
-                <span class="visually-hidden">Мы в Ютюбе</span>
+                <span class="visually-hidden">Мы в Ютюбе.</span>
               </a>
             </li>
 
@@ -246,7 +263,7 @@
                 <svg width="28" height="22" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#social-telegram"></use>
                 </svg>
-                <span class="visually-hidden">Мы в Телеграме</span>
+                <span class="visually-hidden">Мы в Телеграме.</span>
               </a>
             </li>
 

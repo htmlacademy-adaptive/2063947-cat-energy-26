@@ -16,12 +16,14 @@ import csso from 'postcss-csso';
 // Styles
 
 export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
+  return gulp
+    .src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gulp.dest('build/css'))
+    .pipe(postcss([csso()]))
+    .pipe(rename("styles.min.css"))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -30,16 +32,20 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src("source/*.html")
-  .pipe(htmlmin({collapseWhitespace: true}))
+  /*.pipe(htmlmin({collapseWhitespace: true}))*/
   .pipe(gulp.dest("build"));
 }
 
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/*.js")
-  .pipe(terser())
-  .pipe(gulp.dest("build/js"));
+  return gulp
+    .src('source/js/*.js', { sourcemaps: true })
+    .pipe(gulp.dest('build/js'))
+    .pipe(terser())
+    .pipe(rename("scripts.min.js"))
+    .pipe(gulp.dest('build/js', { sourcemaps: '.' }))
+    .pipe(browser.stream());
 }
 
 // Images + WebP
@@ -110,7 +116,7 @@ const server = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html').on('change', gulp.series(html), browser.reload);
 }
 
 // Build
@@ -119,7 +125,7 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
-  gulp.parallel(styles, html, scripts, sprite, createWebp)
+  gulp.parallel(styles, html, scripts, copyImages, sprite, createWebp)
 );
 
 export default gulp.series(
