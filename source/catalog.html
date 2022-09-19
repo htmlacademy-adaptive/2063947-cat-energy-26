@@ -291,6 +291,7 @@
             </div>
             <a class="button product__button" href="#">Заказать</a>
           </li>
+
           <li class="catalog__item">
             <div class="show-more">
               <div class="show-more__wrapper">
@@ -368,26 +369,34 @@
     <footer class="main-footer">
 
       <div class="main-footer__map">
-        <div class="main-footer__map-wrapper">
-          <div class="main-footer__contacts contacts">
-            <h3 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h3>
-            <p class="contacts__text">ул. Большая Конюшенная, д. 19/8<br>
-              <span class="contacts__text-city">Санкт-Петербург</span>
-            </p>
-          </div>
+        <div class="main-footer__contacts contacts contacts--white">
+          <h3 class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</h3>
+          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8<br>
+            <span class="contacts__text-city">Санкт-Петербург</span>
+          </p>
         </div>
-
         <div class="main-footer__location location">
-          <h2 class="visually-hidden">Как до нас добраться.</h2>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="./img/location-desktop.webp 1x, ./img/location-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="./img/location-tablet.webp 1x, ./img/location-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="./img/location-mobile.webp 1x, ./img/location-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="./img/location-desktop.jpg 1x, ./img/location-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="./img/location-tablet.jpg 1x, ./img/location-tablet@2x.jpg 2x">
+            <img class="location__image" src="./img/location-mobile.jpg" width="320" height="362" srcset="./img/location-mobile@2x.jpg 2x" alt="Месторасположение офиса.">
+          </picture>
+        </div>
+      </div>
+
+      <div class="main-footer__google-map-wrapper">
+        <div class="main-footer__google-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002605!2d30.3208587154197!3d59.938719169055005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sca!4v1663354838357!5m2!1sru!2sca"
-            width="100%"
+            width="700"
             height="362"
             allowfullscreen
             title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
           </iframe>
         </div>
-
       </div>
 
       <div class="main-footer__wrapper">

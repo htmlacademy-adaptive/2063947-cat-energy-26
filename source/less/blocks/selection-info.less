@@ -1,9 +1,10 @@
 .selection-info__inner-wrapper {
   @media (min-width: 768px) {
-    width: 565px;
+    width: 524px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    /*align-items: baseline;
+    margin-top: -5px;*/
   }
 
   @media (min-width: 1440px) {
@@ -12,22 +13,26 @@
 }
 
 .selection-info__questions-wrapper {
-  position: relative;
+  /*position: relative;*/
 
   @media (min-width: 1440px) {
     display: flex;
     justify-content: space-between;
-    margin-top: 66px;
+    margin-top: 70px;
     margin-bottom: 69px;
   }
+}
+
+.selection-info__about {
+  position: relative;
 }
 
 .selection-info__about::after {
   @media (max-width: 767px) {
     position: absolute;
     content: "";
-    width: 320px;
-    bottom: 134px;
+    width: 321px;
+    bottom: -24px;
     left: -20px;
     border-top: 1px solid #cdcdcd;
   }

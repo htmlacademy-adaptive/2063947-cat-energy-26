@@ -1,7 +1,7 @@
 .main-footer__wrapper {
   background-color: #f2f2f2;
   width: 100%;
-  padding-top: 38px;
+  padding-top: 40px;
   padding-bottom: 24px;
   margin: 0 auto;
 
@@ -60,4 +60,24 @@
 .main-footer__map-wrapper {
   background-color: #f2f2f2;
   width: 100%;
+}
+
+.main-footer__google-map-wrapper {
+  position: relative;
+}
+
+.main-footer__google-map iframe {
+  width: 100%;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  @media (min-width: 768px) {
+    height: 400px;
+  }
 }
